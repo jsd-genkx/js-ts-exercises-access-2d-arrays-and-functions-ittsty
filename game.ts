@@ -16,11 +16,16 @@ col++;
 moves.push(board[row][col]); // B
 
 // Move Right to C
-
+col++;
+moves.push(board[row][col]);
 // Move Down to F
 
+row++;
+moves.push(board[row][col]);
 // Move left to E
 
+col--;
+moves.push(board[row][col]);
 console.log("Path:", moves.join(" → "));
 // Output: Path: A → B → C → F → E
 console.log("Total Moves (Start from 'A'):", moves.length - 1);
